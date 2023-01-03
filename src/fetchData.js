@@ -1,4 +1,5 @@
 const API_KEY = "09a37c2bc77e93fb02077d4369a947f3";
+const processedData = {};
 
 /**
  *
@@ -90,13 +91,11 @@ function getWindSpeed(responseData) {
 }
 
 async function fetchData(url) {
-    const response = await fetch(url);
-    return response.json();
+  const response = await fetch(url);
+  return response.json();
 }
 
 function processData(responseData) {
-  const processedData = {};
-
   processedData.location = getLocation(responseData);
   processedData.temps = getTemps(responseData);
   processedData.humidity = getHumidity(responseData);
@@ -116,3 +115,4 @@ async function createQueryCall(query) {
 }
 
 export default createQueryCall;
+export { processedData };
