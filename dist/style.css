@@ -1,21 +1,165 @@
-*, ::before, ::after{
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
+html,
+body {
+  height: 100%;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow: hidden;
 }
 
-body{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body,
+p {
+  margin: 0;
 }
 
-.main{
-    display: flex;
-    justify-content: space-between;
-    gap: 200px;
-    flex-wrap: wrap;
+input,
+button {
+  appearance: none;
+}
+
+input {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  border-style: none;
+  background-color: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+#content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(87, 146, 197);
+}
+
+.header {
+  display: flex;
+  gap: 10px;
+  padding: 40px 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(32, 68, 100);
+  font-family: "Manrope", sans-serif;
+}
+
+form {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  border-bottom: 1px solid white;
+}
+
+form input {
+  width: 185px;
+  border: none;
+  background-color: inherit;
+}
+
+::-webkit-input-placeholder {
+  font-weight: bold;
+  color: inherit;
+  font-family: inherit;
+}
+
+form button,
+.toggle-units {
+  font-size: inherit;
+  color: inherit;
+  transition: color 0.1s ease-in-out;
+}
+
+form button:hover,
+.toggle-units:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.error-msg {
+  visibility: hidden;
+  font-weight: bold;
+}
+
+.main {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  background-color: rgb(32, 68, 100);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.main p {
+  font-size: 1.2rem;
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+}
+
+.location-header {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.location-header .location {
+  font-size: 1.8rem;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.left-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-icon-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-info i {
+  font-size: 2.5rem;
+}
+
+.toggle-units {
+  visibility: hidden;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  transition: color 0.1s ease-in-out;
 }
