@@ -215,10 +215,12 @@ function displayData(responseData) {
   displayHumidity(responseData.humidity);
   displayWeatherIcon(responseData);
 
+  // If imperial is selected by user
   if (toggleButton.innerText.toLowerCase().includes("metric")) {
     displayTemps(responseData.temps, "f");
     displayWinds(responseData.wind, "mph");
   } else if (toggleButton.innerText.toLowerCase().includes("imperial")) {
+    // If metric is selected by user
     displayTemps(responseData.temps, "c");
     displayWinds(responseData.wind, "km");
   }
