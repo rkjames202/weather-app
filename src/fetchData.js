@@ -156,16 +156,16 @@ function getWindSpeed(responseData) {
  */
 async function fetchData(url) {
   // Store fulfillment value of API call, a response object
-  const response = await fetch(url);
+  const response = await fetch(url, { mode: "cors" });
   return response.json();
 }
 
 /**
- * Calls all necessary functions to process data from 
+ * Calls all necessary functions to process data from
  * API call
- * 
- * @param {object} responseData - raw data from API call 
- * @returns - all of the data need from the API call processed 
+ *
+ * @param {object} responseData - raw data from API call
+ * @returns - all of the data need from the API call processed
  */
 function processData(responseData) {
   processedData.location = getLocation(responseData);
@@ -180,9 +180,9 @@ function processData(responseData) {
 
 /**
  * Makes an API call with user's query
- * 
- * @param {string} query 
- * @returns - the processed data from API call 
+ *
+ * @param {string} query
+ * @returns - the processed data from API call
  */
 async function createQueryCall(query) {
   // URL with user's query

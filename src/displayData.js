@@ -96,7 +96,7 @@ function displayTemps(temps, option) {
   const feelsLikeTempPara = document.querySelector(".feels-like-temp");
   feelsLikeTempPara.innerText = `Feels Like: ${
     temps.feelsLike[scale]
-  }°${option.toUpperCase()}`;
+  } °${option.toUpperCase()}`;
 
   const highTempPara = document.querySelector(".high-temp");
   highTempPara.innerText = `High: ${
